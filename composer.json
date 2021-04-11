@@ -1,0 +1,42 @@
+{
+    "name": "webflax/profile",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "amirnajmi",
+            "email": "amirmo.naj@gmail.com"
+
+        }
+    ],
+    "minimum-stability": "dev",
+    "homepage": "https://github.com/webflax/profile",
+    "keywords": ["Laravel", "Profile"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebFlax\\Profile\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WebFlax\\Profile\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WebFlax\\Profile\\ProfileServiceProvider"
+            ],
+            "aliases": {
+                "Profile": "WebFlax\\Profile\\Facades\\Profile"
+            }
+        }
+    }
+}
